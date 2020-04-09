@@ -1,0 +1,29 @@
+.style-header {
+  display: flex;
+  background-color: #fff159;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+
+  .style-img {
+  }
+
+  .style-form {
+    padding: 10px;
+
+    form {
+      height: 40px;
+      
+      input {
+        width: 800px;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      button {
+        height: 100%;
+        width: 40px;
+      }
+    }
+  }
+}
