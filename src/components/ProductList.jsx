@@ -16,9 +16,11 @@ export default function ProductList() {
       {products.map((product) => (
         <div className="style-product">
           <ProductListItem
-            texto={product.price}
-            nombre={product.title}
-            imagen={product.thumbnail}
+            price={product.price}
+            freeShipping={product.shipping.free_shipping}
+            city={product.address.city_name}
+            title={product.title}
+            image={product.thumbnail}
           />
         </div>
       ))}
