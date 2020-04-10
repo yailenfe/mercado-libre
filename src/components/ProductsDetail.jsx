@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./ProductsDetail.scss";
+import { useParams } from "react-router-dom";
 
 export default function ProducDetail() {
   const [product, setProduct] = useState({});
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch("https://api.mercadolibre.com/items/MLA644968197")
+    fetch("https://api.mercadolibre.com/items/"+ id)
       .then((res) => res.json())
       .then((res) => {
         const oldProduct = res;
-        fetch("https://api.mercadolibre.com/items/MLA644968197/description")
+        fetch("https://api.mercadolibre.com/items/"+ id + "/description")
           .then((res2) => res2.json())
           .then((res2) => {
             setProduct({
