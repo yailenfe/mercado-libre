@@ -2,4 +2,9 @@
   &:not(:last-child) {
     border-bottom: 1px solid rgb(238, 238, 238);
   }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }

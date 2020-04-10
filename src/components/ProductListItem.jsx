@@ -5,13 +5,13 @@ export default function ProductListItem(props) {
   return (
     <div className="product">
       <div className="style-derecha">
-        <img src={props.image} />
+        <img src={props.image} alt={props.title} />
         <div className="style1">
           <h3>
             {props.price}
             {props.freeShipping && (
               <span className="style-icono">
-                <i class="fas fa-truck"></i>
+                <i className="fas fa-truck"></i>
               </span>
             )}
           </h3>

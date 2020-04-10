@@ -20,7 +20,7 @@ export default function ProducDetail() {
             });
           });
       });
-  }, []);
+  }, [id]);
 
   return (
     <div className="style-contenedor">

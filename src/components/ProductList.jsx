@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ProductList.scss";
 import ProductListItem from "./ProductListItem";
+import { Link } from "react-router-dom";
 
 export default function ProductList(props) {
   const [products, setProducts] = useState([]);
@@ -19,14 +20,16 @@ export default function ProductList(props) {
   return (
     <div className="lista-productos">
       {products.map((product) => (
-        <div className="style-product">
-          <ProductListItem
-            price={product.price}
-            freeShipping={product.shipping.free_shipping}
-            city={product.address.city_name}
-            title={product.title}
-            image={product.thumbnail}
-          />
+        <div className="style-product" key={product.id}>
+          <Link to={"/products/" + product.id}>
+            <ProductListItem
+              price={product.price}
+              freeShipping={product.shipping.free_shipping}
+              city={product.address.city_name}
+              title={product.title}
+              image={product.thumbnail}
+            />
+          </Link>
         </div>
       ))}
     </div>
